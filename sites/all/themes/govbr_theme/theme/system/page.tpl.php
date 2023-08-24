@@ -117,9 +117,6 @@
         </div>
         <div class="col-sm-4">
           <?php if (isset($search_box)): ?>
-          <div class="search">
-            <?php print $search_box ?>
-          </div>
           <?php endif; ?>
 
           <?php if ($social_links): ?>
