@@ -28,3 +28,18 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
  * Include helpers functions.
  */
 bootstrap_include('govbr_theme', 'theme/helpers.inc');
+
+/**
+* Implementa hook_preprocess_HOOK() para os templates de preprocess.
+*/
+function govbr_preprocess_page(&$variables) {
+
+// Adicione a região "second" para o menu secundário.
+
+$variables ['page']['sidebar_second'] = array (
+'#weight' => 10,
+'#theme_wrappers' => 'region',
+'#region' => 'sidebar_second',
+'#attributes' => array ('class' => array('region', 'region-sidebar_second')),
+);
+}
